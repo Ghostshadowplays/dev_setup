@@ -9,16 +9,17 @@ or invoked from the Dev Setup menu.
 import platform
 import re
 import shutil
-import subprocess
-
-# (display name, executable looked up on PATH, version command args)
+# (display name, executable looked up on PATH)
 DEV_TOOLS = [
-    ("Git", "git", ["--version"]),
-    ("Python", "python", ["--version"]),
-    ("GCC", "gcc", ["--version"]),
-    ("VS Code", "code", ["--version"]),
-    ("CMake", "cmake", ["--version"]),
-    ("Node.js", "node", ["--version"]),
+    ("Git", "git"),
+    ("Python", "python"),
+    ("GCC", "gcc"),
+    ("GDB", "gdb"),
+    ("Make", "make"),
+    ("VS Code", "code"),
+    ("CMake", "cmake"),
+    ("Java", "java"),
+    ("Node.js", "node"),
 ]
 
 
@@ -93,7 +94,8 @@ def show_system_info():
     print(f"OS:           {info['os'] or 'unknown'}")
     print(f"Architecture: {info['architecture']}")
     print(f"Python:       {info['python_version']}")
-    print(f"Winget:       {'available' if info['winget_available'] else 'not found'}")
+    if platform.system() == "Windows":
+        print(f"Winget:       {'available' if info['winget_available'] else 'not found'}")
 
     print("\nInstalled Tools:")
     for name, installed, version in get_installed_tools():

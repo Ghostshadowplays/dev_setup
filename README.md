@@ -6,12 +6,18 @@ Automated setup tool for programming languages, compilers, and development envir
 
 ---
 
+![Alt Text](image.png)
+
 ## Features
 
+- Windows and Linux support
 - Git Installer
 - VS Code Installer
 - GCC Installer
-- Python Installer (WIP)
+- Python Installer 
+- Cmake Installer
+- Java Installer
+- Node.js Installer
 
 ### 📋 Supported Installers
 
@@ -31,10 +37,7 @@ The utility provides support for installing the following tools and development 
 
 ## Roadmap
 
-- Java Support
-- Node.js Support
 - Flutter Support
-- Linux Support
 - MacOS Support
 
 ---
