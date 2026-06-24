@@ -2,8 +2,6 @@
 
 Automated setup tool for programming languages, compilers, and development environments.
 
----
-
 ![Alt Text](image.png)
 
 ## Features
@@ -21,8 +19,6 @@ Automated setup tool for programming languages, compilers, and development envir
 
 - Flutter Support
 - MacOS Support
-
----
 
 ## Installation & Getting Started
 
