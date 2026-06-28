@@ -40,7 +40,8 @@ jobs:
 
   release-upload:
     needs: build
-    if: github.event_name == 'release'
+    # Only run if this workflow was triggered by a release AND a tag exists
+    if: startsWith(github.ref, 'refs/tags/')
     runs-on: windows-latest
 
     steps:
